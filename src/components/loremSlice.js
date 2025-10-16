@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchLorem = createAsyncThunk("lorem/fetchLorem", () => {
-  return fetch("https://api.lorem.com/ipsum")
+  return fetch("https://jsonplaceholder.typicode.com/posts/1")
     .then((response) => response.json())
     .then((data) => data)
     .catch((error) => {

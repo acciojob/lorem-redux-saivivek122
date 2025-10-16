@@ -1,9 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchLorem = createAsyncThunk("lorem/fetchLorem", async () => {
-  const response = await fetch("https://api.lorem.com/ipsum");
-  const data = await response.json();
-  return data;
+export const fetchLorem = createAsyncThunk("lorem/fetchLorem", () => {
+  return fetch("https://api.lorem.com/ipsum")
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) => {
+      throw error;
+    });
 });
 
 const loremSlice = createSlice({

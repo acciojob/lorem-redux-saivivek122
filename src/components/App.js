@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchLorem } from "./loremSlice";
 import './../styles/App.css';  
   
-const App = () => {
+const App = () => { 
   const dispatch = useDispatch(); 
   const { data, loading, error } = useSelector((state) => state.lorem);
 

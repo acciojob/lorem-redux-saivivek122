@@ -19,9 +19,10 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
        <h1>A short Naration of Lorem Ipsum</h1> 
-     
-        <h4>{data.title}</h4>         
-        <h4>{data.body}</h4>
+        <ul>
+        <li>Title : {data.title}</li>         
+        <li>Body : {data.body}</li>
+        </ul>
   
     </div>
   )

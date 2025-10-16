@@ -12,18 +12,24 @@ const App = () => {
     dispatch(fetchLorem());
   }, [dispatch]);
 
-  if (loading) return <h4>Loading...</h4>;
-  if (error) return <p>Error: {error}</p>;
-  if (!data) return null;
+  if (loading){
+    return <h4>Loading...</h4>;
+      }
+  if (error) {
+    return <p>Error: {error}</p>;
+      }
+  if (!data) {
+    return null;
+  }
   return (
     <div>
      
       {/* Do not remove the main div */}{" "}
       <h1>A short Naration of Lorem Ipsum</h1>{" "}
-      <h3>
+      <h4>
         Below Contains A title and Body gotten froma random API, Please take
         your time to Review
-      </h3>
+      </h4>
       <ul>
         <div  className="title">
         <li>Title : {data.title}</li>

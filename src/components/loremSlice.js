@@ -2,11 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchLorem = createAsyncThunk("lorem/fetchLorem", () => {
   return fetch("https://jsonplaceholder.typicode.com/posts/1")
-    .then((response) => response.json())
-    .then((data) => data)
-    .catch((error) => {
-      throw error;
-    });
+    .then(res => res.json())
+    .then(data => new Promise(resolve => setTimeout(() => resolve(data), 500))); 
 });
 
 const loremSlice = createSlice({

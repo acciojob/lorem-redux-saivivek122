@@ -16,15 +16,14 @@ const App = () => {
   if (error) return <p>Error: {error}</p>;
   if (!data) return null;
   return (
-    <div>
-        {/* Do not remove the main div */}
-       <h1>A short Naration of Lorem Ipsum</h1> 
-    <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
-        <ul>
+     <div>
+      {/* Do not remove the main div */}
+      <h1>A short Narration of Lorem Ipsum</h1> 
+      <ul>
         <li className="title">Title : {data.title}</li>         
         <li>Body : {data.body}</li>
-        </ul>
-  
+      </ul>
+      <h4>Below Contains A title and Body gotten from a random API, Please take your time to Review</h4>
     </div>
   )
 }

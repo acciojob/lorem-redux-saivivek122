@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-       <h1>Welcome to Lorem Redux</h1> 
+       <h1>A short Naration of Lorem Ipsum</h1> 
       <ul>
         <li>{data.title}</li>         
         <li>{data.body}</li>

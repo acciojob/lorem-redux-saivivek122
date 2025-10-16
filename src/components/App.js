@@ -21,7 +21,7 @@ const App = () => {
        <h1>A short Naration of Lorem Ipsum</h1> 
     <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
         <ul>
-        <li>Title : {data.title}</li>         
+        <li className="title">Title : {data.title}</li>         
         <li>Body : {data.body}</li>
         </ul>
   

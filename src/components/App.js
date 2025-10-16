@@ -5,7 +5,7 @@ import { fetchLorem } from "./loremSlice";
 import './../styles/App.css';
 
 const App = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const { data, loading, error } = useSelector((state) => state.lorem);
 
   useEffect(() => {  

@@ -12,19 +12,24 @@ const App = () => {
     dispatch(fetchLorem());
   }, [dispatch]);
 
-  if (loading) return <h4>Loading...</h4>;
-  if (error) return <p>Error: {error}</p>;
-  if (!data) return null;
   return (
-     <div>
-      {/* Intro text */}
-      <h1>A short Narration of Lorem Ipsum</h1>
-
-      {/* Display fetched data inside <p> */}
-      <p className="title">Title: {data.title}</p>
-      <p>Body: {data.body}</p>
+    <div>
+      {loading ? (
+        <h4>Loading...</h4>
+      ) : data ? (
+        <>
+          <h1>A Short Narration of Lorem Ipsum</h1>
+          <h4>
+            Below contains a Title and Body from a random API. Please review.
+          </h4>
+          <ul>
+            <li className="title">Title: {data.title}</li>
+            <li>Body: {data.body}</li>
+          </ul>
+        </>
+      ) : null}
     </div>
-  )
+  );
 }
 
 export default App

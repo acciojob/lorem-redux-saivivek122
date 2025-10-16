@@ -22,20 +22,21 @@ const App = () => {
     return null;
   }
   return (
-    <div>
-     
-      {/* Do not remove the main div */}{" "}
-      <h1>A short Naration of Lorem Ipsum</h1>{" "}
-      <h4>
-        Below Contains A title and Body gotten froma random API, Please take
-        your time to Review
-      </h4>
-      <ul>
-        <div  className="title">
-        <li>Title : {data.title}</li>
-          </div>
-        <li>Body : {data.body}</li>
-      </ul>
+     <div>
+      {loading ? (
+        <h4>Loading...</h4>
+      ) : data ? (
+        <>
+          <h1>A Short Narration of Lorem Ipsum</h1>
+          <h4>
+            Below contains a Title and Body from a random API. Please review.
+          </h4>
+          <ul>
+            <li className="title">Title: {data.title}</li>
+            <li>Body: {data.body}</li>
+          </ul>
+        </>
+      ) : null}
     </div>
   )
 }

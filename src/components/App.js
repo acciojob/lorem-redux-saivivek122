@@ -8,7 +8,7 @@ const App = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.lorem);
 
-  useEffect(() => {
+  useEffect(() => {  
     dispatch(fetchLorem());
   }, [dispatch]);
 

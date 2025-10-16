@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loremReducer from "./loremSlice";
 
-const default configureStore({
+export default configureStore({
   reducer: {
     lorem: loremReducer,
   },
 });
 
-export default store;
+

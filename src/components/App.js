@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";  
 import { fetchLorem } from "./loremSlice";
-import './../styles/App.css';  
+import './../styles/App.css';    
   
 const App = () => { 
   const dispatch = useDispatch(); 

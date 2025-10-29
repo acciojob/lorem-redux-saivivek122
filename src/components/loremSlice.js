@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import "regenerator-runtime/runtime";
 
 // Fetch single post with shorter delay so Cypress doesn't timeout
 export const fetchLorem = createAsyncThunk("lorem/fetchLorem", async () => {

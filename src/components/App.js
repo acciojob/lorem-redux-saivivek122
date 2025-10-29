@@ -14,9 +14,7 @@ const App = () => {
   return (
     <div>
       {loading && !data && (
-        <h4>
-          Below Contains A title and Body gotten froma random API, Please take your time to Review
-        </h4>
+        <h4>Loading...</h4>
       )}
 
       {!loading && data && (

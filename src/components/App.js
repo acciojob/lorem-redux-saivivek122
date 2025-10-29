@@ -1,12 +1,11 @@
-
-import React, { useEffect } from "react"; 
-import { useDispatch, useSelector } from "react-redux";  
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchLorem } from "./loremSlice";
-import './../styles/App.css';      
-  
-const App = () => { 
- const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.lorem);
+import './../styles/App.css';
+
+const App = () => {
+  const dispatch = useDispatch();
+  const { data, loading } = useSelector((state) => state.lorem);
 
   useEffect(() => {
     dispatch(fetchLorem());
@@ -15,12 +14,14 @@ const App = () => {
   return (
     <div>
       {loading ? (
-        <h4>Loading...</h4>
+        <h4>
+          Below Contains A title and Body gotten froma random API, Please take your time to Review
+        </h4>
       ) : data ? (
         <>
-          <h1>A Short Narration of Lorem Ipsum</h1>
+          <h1>A short Naration of Lorem Ipsum</h1>
           <h4>
-            Below contains a Title and Body from a random API. Please review.
+            Below Contains A title and Body gotten froma random API, Please take your time to Review
           </h4>
           <ul>
             <li className="title">Title: {data.title}</li>
@@ -30,6 +31,6 @@ const App = () => {
       ) : null}
     </div>
   );
-}
+};
 
-export default App
+export default App;

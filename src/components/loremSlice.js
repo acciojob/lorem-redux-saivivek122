@@ -1,14 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import "regenerator-runtime/runtime";
 
-// Fetch single post with shorter delay so Cypress doesn't timeout
-export const fetchLorem = createAsyncThunk("lorem/fetchLorem", async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-  const data = await response.json();
 
-  // small artificial delay (optional)
-  await new Promise((resolve) => setTimeout(resolve, 100)); 
-  return data;
+
+export const fetchLorem = createAsyncThunk("lorem/fetchLorem", () => {
+  return fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then((res) => res.json())
+    .then((data) => new Promise((resolve) => setTimeout(() => resolve(data), 100)));
 });
 
 const loremSlice = createSlice({

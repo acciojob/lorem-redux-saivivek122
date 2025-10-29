@@ -12,7 +12,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="body">
       {loading && !data && (
         <h4>Loading...</h4>
       )}

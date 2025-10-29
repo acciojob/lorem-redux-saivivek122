@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLorem } from "./loremSlice";
-import './../styles/App.css';
+import "./../styles/App.css";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-      {loading ? (
+      {loading && !data ? (
         <h4>
           Below Contains A title and Body gotten froma random API, Please take your time to Review
         </h4>
@@ -24,7 +24,9 @@ const App = () => {
             Below Contains A title and Body gotten froma random API, Please take your time to Review
           </h4>
           <ul>
-            <li className="title">Title: {data.title}</li>
+            <li>
+              <span className="title">Title: {data.title}</span>
+            </li>
             <li>Body: {data.body}</li>
           </ul>
         </>

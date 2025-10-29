@@ -25,7 +25,7 @@ const App = () => {
           </h4>
           <ul>
             <li>
-              <span className="title">Title: {data.title}</span>
+              <span className="title">Title :{data.title}</span>
             </li>
             <li>Body: {data.body}</li>
           </ul>

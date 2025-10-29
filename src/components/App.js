@@ -13,11 +13,13 @@ const App = () => {
 
   return (
     <div>
-      {loading && !data ? (
+      {loading && !data && (
         <h4>
           Below Contains A title and Body gotten froma random API, Please take your time to Review
         </h4>
-      ) : data ? (
+      )}
+
+      {!loading && data && (
         <>
           <h1>A short Naration of Lorem Ipsum</h1>
           <h4>
@@ -30,7 +32,7 @@ const App = () => {
             <li>Body: {data.body}</li>
           </ul>
         </>
-      ) : null}
+      )}
     </div>
   );
 };
